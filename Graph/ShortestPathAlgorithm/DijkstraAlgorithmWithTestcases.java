@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-public class DijkstraAlgorithm {
+public class DijkstraAlgorithmWithTestcases {
     Map<String, List<String[]>> adjacencyList; 
 
-    public DijkstraAlgorithm() {
+    public DijkstraAlgorithmWithTestcases() {
         adjacencyList = new HashMap<>();
     }
     public void addEdge(String source, String destination, int weight) {
@@ -58,7 +58,7 @@ public class DijkstraAlgorithm {
     }
     public static void main(String[] args) {
         System.out.println("Normal Weighted Graph");
-        DijkstraAlgorithm tc1 = new DijkstraAlgorithm();
+        DijkstraAlgorithmWithTestcases tc1 = new DijkstraAlgorithmWithTestcases();
         tc1.addEdge("A", "B", 4);
         tc1.addEdge("A", "C", 4);
         tc1.addEdge("B", "C", 2);
@@ -70,7 +70,7 @@ public class DijkstraAlgorithm {
         tc1.dijkstra("A");
         
         System.out.println("Negative Weighted Graph");
-        DijkstraAlgorithm tc2 = new DijkstraAlgorithm();
+        DijkstraAlgorithmWithTestcases tc2 = new DijkstraAlgorithmWithTestcases();
         tc2.addEdge("A", "B", -4);
         tc2.addEdge("A", "C", -4);
         tc2.addEdge("B", "C", -2);
@@ -82,7 +82,7 @@ public class DijkstraAlgorithm {
         tc2.dijkstra("A");
 
         System.out.println("Self-loop Weighted Graph");
-        DijkstraAlgorithm tc3 = new DijkstraAlgorithm();
+        DijkstraAlgorithmWithTestcases tc3 = new DijkstraAlgorithmWithTestcases();
         tc3.addEdge("A", "B", 4);
         tc3.addEdge("A", "C", 4);
         tc3.addEdge("B", "B", 1);
@@ -97,7 +97,7 @@ public class DijkstraAlgorithm {
         tc3.dijkstra("A");
 
         System.out.println("All-Weight-Are-Zero Graph ");
-        DijkstraAlgorithm tc4 = new DijkstraAlgorithm();
+        DijkstraAlgorithmWithTestcases tc4 = new DijkstraAlgorithmWithTestcases();
         tc4.addEdge("A", "B", 0);
         tc4.addEdge("A", "C", 0);
         tc4.addEdge("B", "C", 0);
@@ -109,7 +109,7 @@ public class DijkstraAlgorithm {
         tc4.dijkstra("A");
 
         System.out.println("Disconnect Weighted Graph ");
-        DijkstraAlgorithm tc5 = new DijkstraAlgorithm();
+        DijkstraAlgorithmWithTestcases tc5 = new DijkstraAlgorithmWithTestcases();
         tc5.addEdge("A", "B", 4);
         tc5.addEdge("A", "C", 4);
         tc5.addEdge("B", "C", 2);
